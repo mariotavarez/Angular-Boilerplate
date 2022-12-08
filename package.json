@@ -8,6 +8,7 @@
 		"watch": "ng build --watch --configuration development",
 		"test:coverage": "jest --coverage --watchAll=true",
 		"test:ci": "jest --ci --coverage --watchAll=false || exit 1",
+		"version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
 		"lint": "eslint '*/**/*.{js,ts,tsx}'",
 		"prettier-write": "prettier --write",
 		"prettier-check": "prettier --check",
