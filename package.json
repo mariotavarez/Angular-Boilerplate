@@ -17,7 +17,10 @@
 		"docs:json": "compodoc -p ./tsconfig.json -e json -d .",
 		"storybook": "npm run docs:json && start-storybook -p 6006",
 		"build-storybook": "npm run docs:json && build-storybook",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"release": "standard-version --releaseCommitMessageFormat=\"chore(release): {{currentTag}} [ci skip]\"",
+		"release:pre": "standard-version --prerelease --releaseCommitMessageFormat=\"chore(release): {{currentTag}} [ci skip]\"",
+		"release:alpha": "standard-version --prerelease alpha"
 	},
 	"private": true,
 	"dependencies": {
@@ -62,6 +65,7 @@
 		"lint-staged": "^13.1.0",
 		"prettier": "^2.8.1",
 		"prettier-eslint": "^15.0.1",
+		"standard-version": "^9.5.0",
 		"typescript": "^4.8.4"
 	},
 	"jest": {
