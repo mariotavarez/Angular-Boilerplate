@@ -1,0 +1,19 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th *ngFor="let header of headers" scope="col">{{header}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of rows">
+            <td>{{row.name | titlecase}}</td>
+            <td>
+                <a [href]="row.url" target="_blank">{{row.url}}</a>
+            </td>
+            <td>
+                <button-maxll (click)="eventButton(row.name)" variant="icon" size="md" disabled="false" color="warning"
+                    icon="plus" local="undefined">Catch</button-maxll>
+            </td>
+        </tr>
+    </tbody>
+</table>
